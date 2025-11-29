@@ -1,0 +1,9 @@
+def money_con(usd_value) :
+    inr_value = usd_value*84
+    print(f"{usd_value} USD = {inr_value} INR")
+
+def money_con(inr_value) :
+    usd_value = inr_value/84
+    print(f"{inr_value} INR = {usd_value} USD")
+print(money_con(10000))
+print(money_con(1))
