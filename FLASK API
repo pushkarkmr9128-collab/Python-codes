@@ -1,0 +1,76 @@
+import flask 
+from flask import Flask
+app = Flask(_name_)
+@app.route("/")
+def projects():
+    return"""
+    <h1> MY RESUME PAGE </h1>
+     <a href = "http://127.0.0.1:5000/resume">click here for resume </a>
+    """
+@app.route("/resume")
+def resume():
+    return"""
+    <h1> Pushkar Kumar </h1>
+    <h2>Objective</h2>
+
+<h4>Motivated AI/Data Science student seeking an internship to apply skills in machine learning, data analysis, and Python development to real-world projects.</h4>
+
+<h2>Skills</h2>
+<ul>
+<h4>Programming: Python, SQL, R</h4>
+
+<h4>ML/AI: Scikit-learn, TensorFlow/PyTorch, NLP, regression/classification, model evaluation</h4>
+
+<h4>Data: Pandas, NumPy, data cleaning, visualization (Matplotlib/Seaborn)</h4>
+
+<h4>Tools: Jupyter, Git, Excel, Tableau</h4>
+
+<h2>Experience</h2>
+<h4> Data Science Intern
+
+SkillCraft Technology
+
+15th August 2025-14th September 2025 (1 Month)
+<br>
+Key Responsibilities & Achievements:
+
+Worked on basic data analysis and preprocessing using Python.
+</br>
+<br>
+
+Learned and applied machine learning concepts such as regression, classification, and data visualization.
+
+Collaborated with mentors to understand real world data science workflows.
+</br>
+
+
+
+Core Team Member - Event Management
+
+
+National Level Project Exhibition 2025, Vivekananda Global University
+
+Played a key role in the core management team, coordinating event activities for a national-level project exhibition attended by students from multiple institutions.
+
+RVICE
+
+S
+
+Managed volunteer teams, scheduling, and logistics, ensuring smooth execution of all event operations.
+
+Assisted in participant handling, registration management, and on-ground coordination, contributing to the event's successful and organized completion.
+
+Participated in a high-impact innovation event by IEDC and secured a place among the Top 10 shortlisted teams.
+
+Played a key role in planning, research, and delivery of the team's project proposal, showcasing strong teamwork and initiative.</h4>
+</ul>
+
+<h2>Projects</h2>
+<ul>
+<h4>Machine Learning Classifier – built and evaluated a model (Random Forest/SVM) to predict [target]; achieved [X]% accuracy.
+NLP Text Analysis – performed sentiment analysis using transformers; cleaned and processed large text datasets.
+Data Dashboard – created an interactive dashboard to visualize trends using Tableau/Streamlit.</h4>
+</ul>
+    """
+if _name=="main_":
+    app.run()
