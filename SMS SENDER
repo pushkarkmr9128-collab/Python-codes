@@ -1,0 +1,11 @@
+from_ import twilio.rest import client
+ACCOUNT_SID="AC434"
+AUTH_TOKEN="5003b0"
+TWILIO_NUMBER="+919128023484"
+RECEIVER_NUMBER="+917050997851"
+client = client(ACCOUNT_SID,AUTH_TOKEN)
+message = client.message.create(
+body="hello pushkar",
+from_=TWILIO_NUMBER,
+To=RECEIVER_NUMBER 
+)
