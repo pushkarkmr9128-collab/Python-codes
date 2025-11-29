@@ -1,0 +1,39 @@
+import streamlit as st
+import pandas as pd
+import matplotlib.pyplot as plt
+
+st.title("MY DASHBOARD")
+st.header("Welcome to my dashboard")
+st.subheader("I am a pushkar kumar")
+st.write("You can write:", 10 + 5)
+
+name = st.text_input("Enter your name:")
+age = st.number_input("Enter your age:", min_value=0, max_value=120)
+st.write("Your name is:", name)
+
+course = st.selectbox("Select your course:", ["BCA", "B.TECH", "MCA"])
+st.write("Your course is:", course)
+
+if st.button("Click Me"):
+    st.write("Button clicked!")
+
+file = st.file_uploader("Upload your file")
+if file:
+    content = file.read()
+    st.success("File uploaded successfully!")
+
+
+data = {"Name": ["TOM", "POP", "Harry", "JACK"], "Marks": [10, 20, 30, 40]}
+df = pd.DataFrame(data)
+st.dataframe(df)
+
+data_chart = pd.DataFrame({"Marks": [10, 20, 20, 10]})
+st.line_chart(data_chart)
+st.bar_chart(data_chart)
+
+subjects = ["Python", "C++", "Java"]
+marks = [20, 10, 5]
+
+fig, ax = plt.subplots()
+ax.pie(marks, labels=subjects, autopct='%1.1f%%')
+st.pyplot(fig)
