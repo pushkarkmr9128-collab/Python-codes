@@ -1,0 +1,3 @@
+import pywhatkit
+pywhatkit.sendwhatmsg_instantly("+919128023XXX", "hii")
+pywhatkit.sendwhatmsg_instantly("+917050997XXX", "hii",14,58)
